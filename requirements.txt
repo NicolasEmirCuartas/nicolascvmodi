@@ -1,0 +1,7 @@
+flask
+openai
+transformers
+datasets
+torch
+farm-haystack
+sentence-transformers

@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilos para los botones */
+.boton {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.boton:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las páginas adicionales */
+.contenido {
+
+    margin: 5px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 1s ease-out forwards; /* Aplicar la animación de carga */
+}
+
+h1, h2, h3, p {
+    margin: 10px 0;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 300px) {
+    .boton {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .contenedor-botones {
+        flex-direction: column;
+    }
+}
+
+/* Animación para el efecto de carga */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Efecto de desplazamiento vertical */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Posición final */
+    }
+}
+
+
+/* Aplicar la animación a los elementos de la historia */
+.contenido h1,
+.contenido h2,
+.contenido h3,
+.contenido p {
+    animation: fadeIn 1s ease-out;
+    opacity: 0; /* Inicialmente oculto */
+    animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+    animation-delay: 0.5s; /* Retrasar la animación para los elementos después del encabezado */
+}
+
+.contenido h1 {
+    animation-delay: 0s; /* Sin retraso para el encabezado principal */
+}
+
+.contenido h2 {
+    animation-delay: 0.2s; /* Retraso menor para subtítulos */
+}
+
+.contenido h3 {
+    animation-delay: 0.4s; /* Retraso adicional para sub-subtítulos */
+}
+
+.contenido p {
+    animation-delay: 0.6s; /* Retraso para párrafos */
+
+}
