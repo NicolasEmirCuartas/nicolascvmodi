@@ -56,7 +56,7 @@
         Mi Historia Profesional
     </a>
      <!-- Botón para ia -->
-    <a href="templates/inicioia.html" class="boton">
+    <a href="inicioia.html" class="boton">
       Entrevista a Nicolas Emir Cuartas Creada por IA
     </a>
 </div>
